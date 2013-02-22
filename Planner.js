@@ -9,8 +9,11 @@ $( document ).ready( function(){
     
     //Gets the API Website and makes a function called xml
     $.get(weatherInfo,{},function(xml){
+        //finds the weatherDesc tag. and says for eahc instance found, do function i
         $('weatherDesc',xml).each(function(i) {
+            //sets the var windSpeed to the value provided by the API in mph
             var windSpeed = $(this).find("windspeedMiles").text();
+            //If code is working, print the windSpeed to the console
             console.log(windSpeed);
         });
     });     
