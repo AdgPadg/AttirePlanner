@@ -8,9 +8,8 @@ $( document ).ready( function(){
     //Creates variables that will be used throughout the program
     var shoes = null, //open, closed, or waterproof
         bottom = null, //light, medium, heavy
-        top = null, //water
-        hat = null,
-        extra = null;
+        top = null, //waterproof, heavy, medium, light
+        extra = null; //hat, 
     $.ajax({
         url: "http://free.worldweatheronline.com/feed/weather.ashx?q=Harrisonburg%2C+Va%2CUSA&format=json&num_of_days=1&key=9f32aa67e5174729132002",
         dataType: 'jsonp',  // Use 'jsonp' because it is cross domain request 
@@ -39,31 +38,9 @@ $( document ).ready( function(){
                         shoes = "waterproof";
                         top = "waterproof";
                         bottom = "heavy";
+                        extra = "hat";
                     }
                 }
-                    
-                    
-                //Decides on which shoes to wear
-                function decideShoes(){
-                    if (totalPrecip > 3){
-                        shoes = "waterproof";
-                    }
-                    else if (totalPrecip <3 && avgTemp > 70){
-                        shoes = "open";
-                    }
-                    else if (totalPrecip <3 && avgTemp < 70){
-                        shoes = "closed";
-                    }
-                }
-                
-                //Decides on which bottoms to wear
-                function decideBottom(){
-                    if (totalPrecip > 3){
-                        bottom = "waterproof";
-                    } 
-                    else if
-                }
-                
             });
         }
     });
