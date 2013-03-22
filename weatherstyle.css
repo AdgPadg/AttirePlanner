@@ -1,0 +1,22 @@
+div {
+	font-family: sans-serif;
+	font-size: 20px;
+	position: center;
+	color: white;
+	margin: 10px;
+	padding-top: 10px;
+	display: block;
+	border: solid 4px white;
+	text-align: center;
+	}
+
+form {	display: block;
+		border: 2px solid grey;
+		font-weight: bold;
+		color: white;
+		margin: 30px;
+		padding-top: 10px;
+	}
+.box{
+	position: absolute;
+}
