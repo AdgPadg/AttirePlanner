@@ -27,7 +27,6 @@ $( document ).ready( function(){
                     wind = value.weather[0].windspeedMiles,
                     weather = value.weather[0].weatherCode,
                     condition = value.weather[0].weatherDesc[0].value;
-                    
                 //Groups the Weather Description into categories
                 function categorize(){
                     //decides what to where when waterproof clothes are required
@@ -81,6 +80,10 @@ $( document ).ready( function(){
                         }
                     }
                 }
+                document.getElementById("totalPrecip").innerHTML = totalPrecip;
+                document.getElementById("minTemp").innerHTML = minTemp;
+                document.getElementById("maxTemp").innerHTML = maxTemp;
+                document.getElementById("condition").innerHTML = condition;
             });
         }
     });
