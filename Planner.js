@@ -27,7 +27,6 @@ $( document ).ready( function(){
                     wind = value.weather[0].windspeedMiles,
                     weather = value.weather[0].weatherCode,
                     condition = value.weather[0].weatherDesc[0].value;
-                    console.log(totalPrecip);
                     
                 //Groups the Weather Description into categories
                 function categorize(){
@@ -70,8 +69,15 @@ $( document ).ready( function(){
                         }
                     }
                     else if(weather === 176 || 143 || 122 || 119 || 116 || 113){
-                        if (avgTemp > 50){
-                            
+                        if (avgTemp > 50 ){
+                            shoes = "light";
+                            top ="light";
+                            bottom = "light";
+                        }
+                        else {
+                            shoes = "medium";
+                            top ="medium";
+                            bottom="medium";
                         }
                     }
                 }
