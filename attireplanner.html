@@ -1,3 +1,4 @@
+
 <html>
     <head>
         <title>Attire Planner</title>
@@ -45,3 +46,49 @@
             condition:<div id="condition"></div>
         </form>
 </html>
+=======
+<html>
+    <head>
+        <title>Attire Planner</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link type="text/css" rel="stylesheet" href="weatherstyle.css"/>
+    </head>
+    <body>
+        <div id="background">
+            <img src="http://www.citywestchurch.com.au/files/Bucky/heaven_invading_earth.jpg">
+        </div>
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="Planner.js"></script>
+        
+        <div id="heading">What should I wear today?</div><br><br>
+        <div id="heading">
+            Location: Harrisonburg
+        </div>
+        <div class="box">
+        <select>
+            <option value="" disabled selected>Gender</option>
+            <option>Male</option>
+            <option>Female</option>
+        </select>
+        <select>
+            <option value"" disabled selected> Attire</option>
+            <option>Formal</option>
+            <option>Casual</option>
+            <option>Bum</option>
+        </select>
+        </div>
+        
+        <form>
+            high: <div id="maxTemp"></div>
+        </form>
+        <form>
+            low:<div id="minTemp"></div>
+        </form>
+        <form>
+            precipitation(in mm): <div id="totalPrecip" ></div>
+        </form>
+        <form>
+            condition:<div id="condition"></div>
+        </form>
+</html>
+
