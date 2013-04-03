@@ -81,6 +81,11 @@ $( document ).ready( function(){
                         }
                     }
                 }
+                //Displays the four variables that will be shown on the webste
+                document.getElementById("totalPrecip").innerHTML = totalPrecip;
+                document.getElementById("minTemp").innerHTML = minTemp;
+                document.getElementById("maxTemp").innerHTML = maxTemp;
+                document.getElementById("condition").innerHTML = condition;
             });
         }
     });

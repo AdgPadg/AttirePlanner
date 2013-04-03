@@ -5,14 +5,19 @@
         <link type="text/css" rel="stylesheet" href="weatherstyle.css"/>
     </head>
     <body>
-        <body background="http://www.citywestchurch.com.au/files/Bucky/heaven_invading_earth.jpg">
+        <div id="background">
+            <img src="http://www.citywestchurch.com.au/files/Bucky/heaven_invading_earth.jpg">
+        </div>
         <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
         <script src="Planner.js"></script>
         
-        <div>What should I wear today?</div><br><br>
+        <div id="heading">What should I wear today?</div><br><br>
+        <div id="heading">
+            Location: Harrisonburg
+        </div>
         <div class="box">
         <select>
-            <option value="" disabled selected> Gender</option>
+            <option value="" disabled selected>Gender</option>
             <option>Male</option>
             <option>Female</option>
         </select>
@@ -23,18 +28,17 @@
             <option>Bum</option>
         </select>
         </div>
-        <div>Location: Harrisonburg</div>
-    
+        
         <form>
-            high:
+            high: <div id="maxTemp"></div>
         </form>
         <form>
-            low:
+            low: <div id="lowTemp"></div>
         </form>
         <form>
-            precipitation: <input id="totalPrecip">
+            Precipitation (in mm): <div id="totalPrecip"></div>
         </form>
         <form>
-            condition:
+            condition: <div id="condition"></div>
         </form>
 </html>
