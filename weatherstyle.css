@@ -15,16 +15,14 @@ height:100%;
 	position: center;
 	color: white;
 	margin: 10px;
-	padding-top: 10px;
 	display: block;
-	border: solid 4px white;
 	text-align: center;
 	}
 
 form {	display: block;
 		border: 2px solid grey;
 		font-weight: bold;
-		color: white;
+		color: black;
 		margin: 30px;
 		padding-top: 10px;
 	}
@@ -32,4 +30,25 @@ form {	display: block;
 	position: relative;
 	margin-left: 50%;
 	margin-right: 50%;
+	display: block;
+		
+}
+.outside{
+	width: 250px;
+	height: 20px;
+	border: 2px solid grey;
+	font-weight: bold;
+	color: black;
+	margin-left: 40%;
+	margin-right: 50%;
+}
+.male {
+	border: solid blue 8px;
+	float:left;
+	font-weight: bold;
+}
+.female {
+	border: solid pink 9px;
+	float:right;
+	font-weight: bold;
 }
