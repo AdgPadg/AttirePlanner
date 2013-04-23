@@ -16,7 +16,7 @@ $( document ).ready( function(){
                 var coverage = value.current_condition[0].cloudcover,
                     iconURL = value.current_condition[0].weatherIconUrl[0].value,
                     todayIcon = value.weather[0].weatherIconUrl[0].value,
-                    girlsIconURL = "http://images.footlocker.com/pi/80625012/large_wide/nike-icon-s%252Fs-t-shirt-mens";
+                    girlsIconURL = "http://images.footlocker.com/pi/80625012/large_wide/nike-icon-s%252Fs-t-shirt-mens",
                     totalPrecip = value.weather[0].precipMM,
                     minTemp = value.weather[0].tempMinF,
                     maxTemp = value.weather[0].tempMaxF,
@@ -35,38 +35,43 @@ $( document ).ready( function(){
                     //Appends the icon url into the HTML file.
                     $('#current-icon').append("<img src='" + iconURL +  "'/>");
                     $('#today-icon').append("<img src='" + todayIcon +  "'/>");         
+                    $('#femalebox').append("<img src='clothes/F-cold-top.jpg' width='150' height='150'/>");
                 //Groups the Weather Description into categories
                 function categorize(){
-                    //decides what to wear when waterproof clothes are required
+                    //decides what to wear when waterproof clothes are required...  heavy=cold
                     if (jQuery.inArray(weather, codesWaterproof) != -1) {
                         if (currentTemp > 50){
                             shoes = "medium";
-                            top = "light waterproof";
+                            top = "heavy";
                             bottom = "heavy";
+                            $('#femalebox').append("<img src='clothes/mens cold shoes.jpg' width='150' height='150'/>");
+                            $('#femalebox').append("<img src='clothes/mens cold shirt.jpg' width='150' height='150'/>");
+                            $('#femalebox').append("<img src='clothes/mens cold pants.jpg' width='150' height='150'/>");
                         }
                         else {
                             shoes = "heavy";
                             top = "heavy waterproof";
                             bottom = "heavy";
-                            extra = "umbrella ";
+                            $('#femalebox').append("<img src='clothes/mens rainy shoes.jpg' width='150' height='150'/>");
+                            $('#femalebox').append("<img src='clothes/mens rainy shirt.jpg' width='150' height='150'/>");
+                            $('#femalebox').append("<img src='clothes/mens rainy pants.jpg' width='150' height='150'/>");
                         }
                     }
                     else if (jQuery.inArray(weather, codesHeavy) != -1) {
                         shoes = "heavy";
-                        top = "light waterproof";
+                        top = "heavy";
                         bottom = "medium";
-                        extra = "none";
                     }
                     else if (jQuery.inArray(weather, codesMedium) != -1 ){
                         if (currentTemp > 50){
                             shoes = "medium";
-                            top = "light waterproof";
+                            top = "heavy";
                             bottom = "light";
                             extra = "none";
                         }
                         else {
                             shoes = "medium";
-                            top = "light waterproof";
+                            top = "heavy";
                             bottom = "medium";
                             extra = "none";
                         }
