@@ -15,12 +15,14 @@ $( document ).ready( function(){
                 //sets variables that will be useful for the code
                 var coverage = value.current_condition[0].cloudcover,
                     iconURL = value.current_condition[0].weatherIconUrl[0].value,
+                    todayIcon = value.weather[0].weatherIconUrl[0].value,
+                    girlsIconURL = "http://images.footlocker.com/pi/80625012/large_wide/nike-icon-s%252Fs-t-shirt-mens";
                     totalPrecip = value.weather[0].precipMM,
                     minTemp = value.weather[0].tempMinF,
                     maxTemp = value.weather[0].tempMaxF,
-                    currentTemp = value.current_condition[0].temp_F,
+                    currentTemp = parseInt(value.current_condition[0].temp_F),
                     wind = value.weather[0].windspeedMiles,
-                    weather = value.weather[0].weatherCode,
+                    weather = parseInt(value.weather[0].weatherCode),
                     condition = value.weather[0].weatherDesc[0].value,
                     codesWaterproof = [179 , 182 , 185 , 200 , 227 , 230 , 281 ,
                        284 , 299 , 302 , 305 , 308 , 311 , 314 , 317 , 
@@ -31,29 +33,22 @@ $( document ).ready( function(){
                     codesMedium = [296, 293, 266, 263],
                     codesLight = [176, 143, 122, 119, 116, 113];
                     //Appends the icon url into the HTML file.
-                    $('#image-div').append("<img src='" + iconURL +  "'/>");        
+                    $('#current-icon').append("<img src='" + iconURL +  "'/>");
+                    $('#today-icon').append("<img src='" + todayIcon +  "'/>");         
                 //Groups the Weather Description into categories
-                //function categorize(){
+                function categorize(){
                     //decides what to wear when waterproof clothes are required
-                    if (jQuery.inArray(weather, codesMedium) != -1) {
-                        alert(currentTemp);
+                    if (jQuery.inArray(weather, codesWaterproof) != -1) {
                         if (currentTemp > 50){
                             shoes = "medium";
                             top = "light waterproof";
                             bottom = "heavy";
-                            return shoes;
-                            return top;
-                            return bottom;
                         }
                         else {
                             shoes = "heavy";
                             top = "heavy waterproof";
                             bottom = "heavy";
                             extra = "umbrella ";
-                            return shoes;
-                            return top;
-                            return bottom;
-                            return extra;
                         }
                     }
                     else if (jQuery.inArray(weather, codesHeavy) != -1) {
@@ -61,9 +56,6 @@ $( document ).ready( function(){
                         top = "light waterproof";
                         bottom = "medium";
                         extra = "none";
-                        return shoes;
-                        return top;
-                        return bottom;
                     }
                     else if (jQuery.inArray(weather, codesMedium) != -1 ){
                         if (currentTemp > 50){
@@ -71,40 +63,29 @@ $( document ).ready( function(){
                             top = "light waterproof";
                             bottom = "light";
                             extra = "none";
-                            console.log(shoes);
-
                         }
                         else {
                             shoes = "medium";
                             top = "light waterproof";
                             bottom = "medium";
                             extra = "none";
-                            return shoes;
-                            return top;
-                            return bottom;
-                            return extra;
                         }
                     }
-                    else if(jQuery.inArray(weather, codesLight) != -1 ){
+                    else if (jQuery.inArray(weather, codesLight) != -1 ){
                         if (currentTemp > 50 ){
                             shoes = "light";
                             top ="light";
                             bottom = "light";
-                            return shoes;
-                            return top;
-                            return bottom;
-                            alert(shoes);
+                            $('#image-div').append("<img src='" + girlsIconURL +  "'/>");
                         }
                         else {
                             shoes = "medium";
                             top ="medium";
                             bottom="medium";
-                            return shoes;
-                            return top;
-                            return bottom;
-                        }
+                         }
                     }
-                //}
+                }
+                categorize();
                 document.getElementById("totalPrecip").innerHTML = totalPrecip;
                 document.getElementById("minTemp").innerHTML = minTemp;
                 document.getElementById("maxTemp").innerHTML = maxTemp;

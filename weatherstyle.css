@@ -19,7 +19,6 @@ height:100%;
 	}
 
 form {	display: block;
-		border: 2px solid grey;
 		font-weight: bold;
 		color: black;
 		margin: 30px;
@@ -35,7 +34,6 @@ form {	display: block;
 .outside{
 	width: 250px;
 	height: 20px;
-	border: 2px solid grey;
 	font-weight: bold;
 	color: black;
 	margin-left: 40%;
@@ -50,4 +48,5 @@ form {	display: block;
 	border: solid pink 9px;
 	float:right;
 	font-weight: bold;
+	position: right;;
 }
