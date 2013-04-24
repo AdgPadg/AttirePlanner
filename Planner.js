@@ -53,47 +53,47 @@ $( document ).ready( function(){
                             top = "heavy";
                             bottom = "heavy";
 
-                            $('#maleshoes').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/mens cold shoes.jpg' width='150' height='150'/></a>");
-                            $('#maletop').append("<a href='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtSiBnId38zrcl10bqMEWM5NaZtvi4gnME34uXZZFUP3PtwVhx' target='_blank'><img src='clothes/mens cold shirt.jpg' width='150' height='150'/></a>");
-                            $('#malebottom').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/mens cold pants.jpg' width='150' height='150'/></a>");
-                            $('#femaleshoes').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/womens cold shoes.jpg' width='150' height='150'/></a>");
-                            $('#femaletop').append("<a href='hhttp://www.backcountry.com/images/items/medium/HUR/HUR1120/CIN.jpg' target='_blank'><img src='clothes/womens cold shirt.jpg' width='150' height='150'/></a>");
-                            $('#femalebottom').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/womens cold pants.jpg' width='150' height='150'/></a>");
+                            $('#maleshoes').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/mens cold shoes.jpg' width='100%' height='100%'/></a>");
+                            $('#maletop').append("<a href='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtSiBnId38zrcl10bqMEWM5NaZtvi4gnME34uXZZFUP3PtwVhx' target='_blank'><img src='clothes/mens cold shirt.jpg' width='100%' height='100%'/></a>");
+                            $('#malebottom').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/mens cold pants.jpg' width='100%' height='100%'/></a>");
+                            $('#femaleshoes').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/womens cold shoes.jpg' width='100%' height='100%'/></a>");
+                            $('#femaletop').append("<a href='hhttp://www.backcountry.com/images/items/medium/HUR/HUR1120/CIN.jpg' target='_blank'><img src='clothes/womens cold shirt.jpg' width='100%' height='100%'/></a>");
+                            $('#femalebottom').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/womens cold pants.jpg' width='100%' height='100%'/></a>");
                         }
                         else {
                             shoes = "heavy";
                             top = "heavy waterproof";
                             bottom = "heavy";
-                            $('#maleshoes').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/mens rainy shoes.jpg' width='150' height='150'/></a>");
-                            $('#maletop').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/mens rainy shirt.jpg' width='150' height='150'/></a>");
-                            $('#malebottom').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/mens rainy pants.jpg' width='150' height='150'/></a>");
-                            $('#femaleshoes').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/womens rainy shoes.jpg' width='150' height='150'/></a>");
-                            $('#femaletop').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/womens rainy shirt.jpg' width='150' height='150'/></a>");
-                            $('#femalebottom').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/womens rainy pants.jpg' width='150' height='150'/></a>");
+                            $('#maleshoes').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/mens rainy shoes.jpg' width='100%' height='100%'/></a>");
+                            $('#maletop').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/mens rainy shirt.jpg' width='100%' height='100%'/></a>");
+                            $('#malebottom').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/mens rainy pants.jpg' width='100%' height='100%'/></a>");
+                            $('#femaleshoes').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/womens rainy shoes.jpg' width='100%' height='100%'/></a>");
+                            $('#femaletop').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/womens rainy shirt.jpg' width='100%' height='100%'/></a>");
+                            $('#femalebottom').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/womens rainy pants.jpg' width='100%' height='100%'/></a>");
                         }
                     }
                     else if (jQuery.inArray(weather, codesHeavy) != -1) {
                         shoes = "heavy";
                         top = "heavy";
                         bottom = "medium";
-                        $('#maleshoes').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/mens cold shoes.jpg' width='150' height='150'/></a>");
-                        $('#maletop').append("<a href='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtSiBnId38zrcl10bqMEWM5NaZtvi4gnME34uXZZFUP3PtwVhx' target='_blank'><img src='clothes/mens cold shirt.jpg' width='150' height='150'/></a>");
-                        $('#malebottom').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/mens warm pants.jpg' width='150' height='150'/></a>");
-                        $('#femaleshoes').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/womens cold shoes.jpg' width='150' height='150'/></a>");
-                        $('#femaletop').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/womens cold shirt.jpg' width='150' height='150'/></a>");
-                        $('#femalebottom').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/womens warm pants.jpg' width='150' height='150'/></a>");
+                        $('#maleshoes').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/mens cold shoes.jpg' width='100%' height='100%'/></a>");
+                        $('#maletop').append("<a href='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtSiBnId38zrcl10bqMEWM5NaZtvi4gnME34uXZZFUP3PtwVhx' target='_blank'><img src='clothes/mens cold shirt.jpg' width='100%' height='100%'/></a>");
+                        $('#malebottom').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/mens warm pants.jpg' width='100%' height='100%'/></a>");
+                        $('#femaleshoes').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/womens cold shoes.jpg' width='100%' height='100%'/></a>");
+                        $('#femaletop').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/womens cold shirt.jpg' width='100%' height='100%'/></a>");
+                        $('#femalebottom').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/womens warm pants.jpg' width='100%' height='100%'/></a>");
                     }
                     else if (jQuery.inArray(weather, codesMedium) != -1 ){
                         if (currentTemp > 50){
                             shoes = "medium";
                             top = "heavy";
                             bottom = "light";
-                            $('#maleshoes').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/mens cold shoes.jpg' width='150' height='150'/></a>");
-                            $('#maletop').append("<a href='http://windwoodtshirts.com/blank_long_sleeve_t-shirt_black.gif' target='_blank'><img src='clothes/mens warm shirt.jpg' width='150' height='150'/></a>");
-                            $('#malebottom').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/mens warm pants.jpg' width='150' height='150'/></a>");
-                            $('#femaleshoes').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/womens cold shoes.jpg' width='150' height='150'/></a>");
-                            $('#femaletop').append("<a href='http://www.rei.com/zoom/vv/8bb96023-1608-4249-9b24-a7f556734b69.jpg/440' target='_blank'><img src='clothes/womens warm shirt.jpg' width='150' height='150'/></a>");
-                            $('#femalebottom').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/womens warm pants.jpg' width='150' height='150'/></a>");
+                            $('#maleshoes').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/mens cold shoes.jpg' width='100%' height='100%'/></a>");
+                            $('#maletop').append("<a href='http://windwoodtshirts.com/blank_long_sleeve_t-shirt_black.gif' target='_blank'><img src='clothes/mens warm shirt.jpg' width='100%' height='100%'/></a>");
+                            $('#malebottom').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/mens warm pants.jpg' width='100%' height='100%'/></a>");
+                            $('#femaleshoes').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/womens cold shoes.jpg' width='100%' height='100%'/></a>");
+                            $('#femaletop').append("<a href='http://www.rei.com/zoom/vv/8bb96023-1608-4249-9b24-a7f556734b69.jpg/440' target='_blank'><img src='clothes/womens warm shirt.jpg' width='100%' height='100%'/></a>");
+                            $('#femalebottom').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/womens warm pants.jpg' width='100%' height='100%'/></a>");
                         }
                         else {
                             shoes = "medium";
@@ -105,12 +105,12 @@ $( document ).ready( function(){
                             if (currentCondition= "Sunny"){
                                 sunnyweather();
                             }
-                            $('#maleshoes').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/mens cold shoes.jpg' width='150' height='150'/></a>");
-                            $('#maletop').append("<a href='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtSiBnId38zrcl10bqMEWM5NaZtvi4gnME34uXZZFUP3PtwVhx' target='_blank'><img src='clothes/mens cold shirt.jpg' width='150' height='150'/></a>");
-                            $('#malebottom').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/mens cold pants.jpg' width='150' height='150'/></a>");
-                            $('#femaleshoes').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/womens cold shoes.jpg' width='150' height='150'/></a>");
-                            $('#femaletop').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/womens cold shirt.jpg' width='150' height='150'/></a>");
-                            $('#femalebottom').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/womens cold pants.jpg' width='150' height='150'/></a>");
+                            $('#maleshoes').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/mens cold shoes.jpg' width='100%' height='100%'/></a>");
+                            $('#maletop').append("<a href='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtSiBnId38zrcl10bqMEWM5NaZtvi4gnME34uXZZFUP3PtwVhx' target='_blank'><img src='clothes/mens cold shirt.jpg' width='100%' height='100%'/></a>");
+                            $('#malebottom').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/mens cold pants.jpg' width='100%' height='100%'/></a>");
+                            $('#femaleshoes').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/womens cold shoes.jpg' width='100%' height='100%'/></a>");
+                            $('#femaletop').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/womens cold shirt.jpg' width='100%' height='100%'/></a>");
+                            $('#femalebottom').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/womens cold pants.jpg' width='100%' height='100%'/></a>");
                         }
                     }
                     else if (jQuery.inArray(weather, codesLight) != -1 ){
@@ -124,23 +124,23 @@ $( document ).ready( function(){
                             if (currentCondition= "Sunny"){
                                 sunnyweather();
                             }
-                            $('#maleshoes').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/mens hot shoes.jpg' width='150' height='150'/></a>");
-                            $('#maletop').append("<a href='http://popstyle.info/wp-content/uploads/2012/12/mens-t-shirt.jpg' target='_blank'><img src='clothes/mens hot shirt.jpg' width='150' height='150'/></a>");
-                            $('#malebottom').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/mens hot pants.jpg' width='150' height='150'/></a>");
-                            $('#femaleshoes').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/womens hot shoes.jpg' width='150' height='150'/></a>");
-                            $('#femaletop').append("<a href='https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQEP9cSpCCOdhKr_HLp0YlOwgUoSnL89tEpx0Wf4gLhdfoK-vOlBQ' target='_blank'><img src='clothes/womens hot shirt.jpg' width='150' height='150'/></a>");
-                            $('#femalebottom').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/womens hot pants.jpg' width='150' height='150'/></a>");
+                            $('#maleshoes').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/mens hot shoes.jpg' width='100%' height='100%'/></a>");
+                            $('#maletop').append("<a href='http://popstyle.info/wp-content/uploads/2012/12/mens-t-shirt.jpg' target='_blank'><img src='clothes/mens hot shirt.jpg' width='100%' height='100%'/></a>");
+                            $('#malebottom').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/mens hot pants.jpg' width='100%' height='100%'/></a>");
+                            $('#femaleshoes').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/womens hot shoes.jpg' width='100%' height='100%'/></a>");
+                            $('#femaletop').append("<a href='https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQEP9cSpCCOdhKr_HLp0YlOwgUoSnL89tEpx0Wf4gLhdfoK-vOlBQ' target='_blank'><img src='clothes/womens hot shirt.jpg' width='100%' height='100%'/></a>");
+                            $('#femalebottom').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/womens hot pants.jpg' width='100%' height='100%'/></a>");
                         }
                         else {
                             shoes = "medium";
                             top ="medium";
                             bottom="medium";
-                            $('#maleshoes').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/mens medium shoes.jpg' width='150' height='150'/></a>");
-                            $('#maletop').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/mens medium shirt.jpg' width='150' height='150'/></a>");
-                            $('#malebottom').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/mens medium pants.jpg' width='150' height='150'/></a>");
-                            $('#femaleshoes').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/womens medium shoes.jpg' width='150' height='150'/></a>");
-                            $('#femaletop').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/womens medium shirt.jpg' width='150' height='150'/></a>");
-                            $('#femalebottom').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/womens medium pants.jpg' width='150' height='150'/></a>");
+                            $('#maleshoes').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/mens medium shoes.jpg' width='100%' height='100%'/></a>");
+                            $('#maletop').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/mens medium shirt.jpg' width='100%' height='100%'/></a>");
+                            $('#malebottom').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/mens medium pants.jpg' width='100%' height='100%'/></a>");
+                            $('#femaleshoes').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/womens medium shoes.jpg' width='100%' height='100%'/></a>");
+                            $('#femaletop').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/womens medium shirt.jpg' width='100%' height='100%'/></a>");
+                            $('#femalebottom').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/womens medium pants.jpg' width='100%' height='100%'/></a>");
                         }
                     }
                 }
