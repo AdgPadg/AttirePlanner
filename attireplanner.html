@@ -10,11 +10,11 @@
         <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
         <script src="Planner.js"></script>
         
-        <div id="heading">What should I wear today?</div><br><br>
+        <div id="heading">What should I wear today?</div>
         <div id="heading">
             Location: Harrisonburg
         </div>
-        <div class="box">
+        <div id="box">
         <select>
             <option value"" disabled selected> Attire</option>
             <option>Formal</option>
@@ -22,40 +22,45 @@
             <option>Bum</option>
         </select>
         </div>
-        <div class="outside" id="current-icon">
-            Current Condition: <div id="currentCondition"></div>
-        </div>
-        <form class="outside">
-            Current Temperature: <div id="currentTemp"></div>
-        </form>
-        <form class="outside">
-            High: <div id="maxTemp"></div>
-        </form>
-        <form class="outside">
-            Low:<div id="minTemp"></div>
-        </form>
-        <form class="outside">
-            Precipitation(in mm): <div id="totalPrecip">
-        </div>
-        </form>
-        <div class="outside" id="today-icon">
-            Today's Forcast:<div id="condition"></div>
-        </div>
-        </div>
-        <div class="Male" align="left" >
-            <u1>
-                <center>Male</center>
-                <div id="maletop"></div>
-                <div id="malebottom"></div>
-                <div id="maleshoes"></div>
-            <u1>
-        </div>
-        <div class="Female" id="femalebox">
-            <ul>
+        <div id="aParent">
+            <center>
+            <div id="Male" >
+                    <center>Male</center>
+                    <div id="maletop"></div><br>
+                    <div id="malebottom"></div><br>
+                    <div id="maleshoes"></div>
+            </div>
+            </center>
+            <div id="weather">  
+                <div id="headings">
+                    <div id="current-icon">
+                    Current Condition: <div id="currentCondition"></div>
+                    </div>
+                </div><br><br><br>
+                <div id="headings">
+                    Current Temperature:<div id="currentTemp"></div>
+                </div><br>
+                <div id="headings">
+                    High: <div id="maxTemp"></div>
+                </div><br>
+                <div id="headings">
+                    Low:<div id="minTemp"></div>
+                </div><br>
+                <div id="headings">
+                    Precipitation(in mm):<div id="totalPrecip"></div>
+                </div><br>
+                <div id="headings">
+                    <div id="today-icon">
+                    Daily Condition:<div id="condition"></div>
+                    </div><br>
+                </div>   
+            </div>
+            <div id="Female">
                 <center>Female</center>
-                <div id="femaletop"></div>
-                <div id="femalebottom"></div>
+                <div id="femaletop"></div><br>
+                <div id="femalebottom"></div><br>
                 <div id="femaleshoes"></div>
-            </ul>
-         </div>
+            </div>
+        </div>
+    </body>
 </html>
