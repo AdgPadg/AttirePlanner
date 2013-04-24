@@ -61,19 +61,27 @@ $( document ).ready( function(){
                         shoes = "heavy";
                         top = "heavy";
                         bottom = "medium";
+                        $('#femalebox').append("<img src='clothes/mens cold shoes.jpg' width='150' height='150'/>");
+                        $('#femalebox').append("<img src='clothes/mens cold shirt.jpg' width='150' height='150'/>");
+                        $('#femalebox').append("<img src='clothes/mens warm pants.jpg' width='150' height='150'/>");
                     }
                     else if (jQuery.inArray(weather, codesMedium) != -1 ){
                         if (currentTemp > 50){
                             shoes = "medium";
                             top = "heavy";
                             bottom = "light";
-                            extra = "none";
+                            $('#femalebox').append("<img src='clothes/mens cold shoes.jpg' width='150' height='150'/>");
+                            $('#femalebox').append("<img src='clothes/mens warm shirt.jpg' width='150' height='150'/>");
+                            $('#femalebox').append("<img src='clothes/mens warm pants.jpg' width='150' height='150'/>");
                         }
                         else {
                             shoes = "medium";
                             top = "heavy";
                             bottom = "medium";
                             extra = "none";
+                            $('#femalebox').append("<img src='clothes/mens cold shoes.jpg' width='150' height='150'/>");
+                            $('#femalebox').append("<img src='clothes/mens cold shirt.jpg' width='150' height='150'/>");
+                            $('#femalebox').append("<img src='clothes/mens cold pants.jpg' width='150' height='150'/>");
                         }
                     }
                     else if (jQuery.inArray(weather, codesLight) != -1 ){
@@ -81,12 +89,17 @@ $( document ).ready( function(){
                             shoes = "light";
                             top ="light";
                             bottom = "light";
-                            $('#image-div').append("<img src='" + girlsIconURL +  "'/>");
+                            $('#femalebox').append("<img src='clothes/mens hot shoes.jpg' width='150' height='150'/>");
+                            $('#femalebox').append("<img src='clothes/mens hot shirt.jpg' width='150' height='150'/>");
+                            $('#femalebox').append("<img src='clothes/mens hot pants.jpg' width='150' height='150'/>");
                         }
                         else {
                             shoes = "medium";
                             top ="medium";
                             bottom="medium";
+                            $('#femalebox').append("<img src='clothes/mens medium shoes.jpg' width='150' height='150'/>");
+                            $('#femalebox').append("<img src='clothes/mens medium shirt.jpg' width='150' height='150'/>");
+                            $('#femalebox').append("<img src='clothes/mens medium pants.jpg' width='150' height='150'/>");
                          }
                     }
                 }
