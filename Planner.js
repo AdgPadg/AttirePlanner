@@ -16,7 +16,6 @@ $( document ).ready( function(){
                 var coverage = value.current_condition[0].cloudcover,
                     iconURL = value.current_condition[0].weatherIconUrl[0].value,
                     todayIcon = value.weather[0].weatherIconUrl[0].value,
-                    girlsIconURL = "http://images.footlocker.com/pi/80625012/large_wide/nike-icon-s%252Fs-t-shirt-mens";
                     totalPrecip = value.weather[0].precipMM,
                     minTemp = value.weather[0].tempMinF,
                     maxTemp = value.weather[0].tempMaxF,
@@ -34,41 +33,68 @@ $( document ).ready( function(){
                     codesLight = [176, 143, 122, 119, 116, 113];
                     //Appends the icon url into the HTML file.
                     $('#current-icon').append("<img src='" + iconURL +  "'/>");
-                    $('#today-icon').append("<img src='" + todayIcon +  "'/>");         
+                    $('#today-icon').append("<img src='" + todayIcon +  "'/>");  
                 //Groups the Weather Description into categories
                 function categorize(){
-                    //decides what to wear when waterproof clothes are required
+                    //decides what to wear when waterproof clothes are required...  heavy=cold
                     if (jQuery.inArray(weather, codesWaterproof) != -1) {
                         if (currentTemp > 50){
                             shoes = "medium";
-                            top = "light waterproof";
+                            top = "heavy";
                             bottom = "heavy";
+                            $('#malebox').append("<img src='clothes/mens cold shoes.jpg' width='150' height='150'/>");
+                            $('#malebox').append("<img src='clothes/mens cold shirt.jpg' width='150' height='150'/>");
+                            $('#malebox').append("<img src='clothes/mens cold pants.jpg' width='150' height='150'/>");
+                            $('#femalebox').append("<img src='clothes/womens cold shoes.jpg' width='150' height='150'/>");
+                            $('#femalebox').append("<img src='clothes/womens cold shirt.jpg' width='150' height='150'/>");
+                            $('#femalebox').append("<img src='clothes/womens cold pants.jpg' width='150' height='150'/>");
                         }
                         else {
                             shoes = "heavy";
                             top = "heavy waterproof";
                             bottom = "heavy";
-                            extra = "umbrella ";
+                            $('#malebox').append("<img src='clothes/mens rainy shoes.jpg' width='150' height='150'/>");
+                            $('#malebox').append("<img src='clothes/mens rainy shirt.jpg' width='150' height='150'/>");
+                            $('#malebox').append("<img src='clothes/mens rainy pants.jpg' width='150' height='150'/>");
+                            $('#femalebox').append("<img src='clothes/womens rainy shoes.jpg' width='150' height='150'/>");
+                            $('#femalebox').append("<img src='clothes/womens rainy shirt.jpg' width='150' height='150'/>");
+                            $('#femalebox').append("<img src='clothes/womens rainy pants.jpg' width='150' height='150'/>");
                         }
                     }
                     else if (jQuery.inArray(weather, codesHeavy) != -1) {
                         shoes = "heavy";
-                        top = "light waterproof";
+                        top = "heavy";
                         bottom = "medium";
-                        extra = "none";
+                        $('#malebox').append("<img src='clothes/mens cold shoes.jpg' width='150' height='150'/>");
+                        $('#malebox').append("<img src='clothes/mens cold shirt.jpg' width='150' height='150'/>");
+                        $('#malebox').append("<img src='clothes/mens warm pants.jpg' width='150' height='150'/>");
+                        $('#femalebox').append("<img src='clothes/womens cold shoes.jpg' width='150' height='150'/>");
+                        $('#femalebox').append("<img src='clothes/womens cold shirt.jpg' width='150' height='150'/>");
+                        $('#femalebox').append("<img src='clothes/womens warm pants.jpg' width='150' height='150'/>");
                     }
                     else if (jQuery.inArray(weather, codesMedium) != -1 ){
                         if (currentTemp > 50){
                             shoes = "medium";
-                            top = "light waterproof";
+                            top = "heavy";
                             bottom = "light";
-                            extra = "none";
+                            $('#malebox').append("<img src='clothes/mens cold shoes.jpg' width='150' height='150'/>");
+                            $('#malebox').append("<img src='clothes/mens warm shirt.jpg' width='150' height='150'/>");
+                            $('#malebox').append("<img src='clothes/mens warm pants.jpg' width='150' height='150'/>");
+                            $('#femalebox').append("<img src='clothes/womens cold shoes.jpg' width='150' height='150'/>");
+                            $('#femalebox').append("<img src='clothes/womens warm shirt.jpg' width='150' height='150'/>");
+                            $('#femalebox').append("<img src='clothes/womens warm pants.jpg' width='150' height='150'/>");
                         }
                         else {
                             shoes = "medium";
-                            top = "light waterproof";
+                            top = "heavy";
                             bottom = "medium";
                             extra = "none";
+                            $('#malebox').append("<img src='clothes/mens cold shoes.jpg' width='150' height='150'/>");
+                            $('#malebox').append("<img src='clothes/mens cold shirt.jpg' width='150' height='150'/>");
+                            $('#malebox').append("<img src='clothes/mens cold pants.jpg' width='150' height='150'/>");
+                            $('#femalebox').append("<img src='clothes/womens cold shoes.jpg' width='150' height='150'/>");
+                            $('#femalebox').append("<img src='clothes/womens cold shirt.jpg' width='150' height='150'/>");
+                            $('#femalebox').append("<img src='clothes/womens cold pants.jpg' width='150' height='150'/>");
                         }
                     }
                     else if (jQuery.inArray(weather, codesLight) != -1 ){
@@ -76,12 +102,23 @@ $( document ).ready( function(){
                             shoes = "light";
                             top ="light";
                             bottom = "light";
-                            $('#image-div').append("<img src='" + girlsIconURL +  "'/>");
+                            $('#malebox').append("<img src='clothes/mens hot shoes.jpg' width='150' height='150'/>");
+                            $('#malebox').append("<img src='clothes/mens hot shirt.jpg' width='150' height='150'/>");
+                            $('#malebox').append("<img src='clothes/mens hot pants.jpg' width='150' height='150'/>");
+                            $('#femalebox').append("<img src='clothes/womens hot shoes.jpg' width='150' height='150'/>");
+                            $('#femalebox').append("<img src='clothes/womens hot shirt.jpg' width='150' height='150'/>");
+                            $('#femalebox').append("<img src='clothes/womens hot pants.jpg' width='150' height='150'/>");
                         }
                         else {
                             shoes = "medium";
                             top ="medium";
                             bottom="medium";
+                            $('#malebox').append("<img src='clothes/mens medium shoes.jpg' width='150' height='150'/>");
+                            $('#malebox').append("<img src='clothes/mens medium shirt.jpg' width='150' height='150'/>");
+                            $('#malebox').append("<img src='clothes/mens medium pants.jpg' width='150' height='150'/>");
+                            $('#femalebox').append("<img src='clothes/womens medium shoes.jpg' width='150' height='150'/>");
+                            $('#femalebox').append("<img src='clothes/womens medium shirt.jpg' width='150' height='150'/>");
+                            $('#femalebox').append("<img src='clothes/womens medium pants.jpg' width='150' height='150'/>");
                          }
                     }
                 }
