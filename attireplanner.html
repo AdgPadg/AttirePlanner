@@ -6,7 +6,6 @@
     </head>
     <body>
         <div id="background">
-            <img src="clothes/background.jpg">
         </div>
         <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
         <script src="Planner.js"></script>
@@ -23,21 +22,24 @@
             <option>Bum</option>
         </select>
         </div>
+        <div class="outside" id="current-icon">
+            Current Condition: <div id="currentCondition"></div>
+        </div>
         <form class="outside">
-            current temperature: <div id="currentTemp"></div>
+            Current Temperature: <div id="currentTemp"></div>
         </form>
         <form class="outside">
-            high: <div id="maxTemp"></div>
+            High: <div id="maxTemp"></div>
         </form>
         <form class="outside">
-            low:<div id="minTemp"></div>
+            Low:<div id="minTemp"></div>
         </form>
         <form class="outside">
-            precipitation(in mm): <div id="totalPrecip">
+            Precipitation(in mm): <div id="totalPrecip">
         </div>
         </form>
-        <div class="outside" id="current-icon">
-            condition:<div id="condition"></div>
+        <div class="outside" id="today-icon">
+            Today's Forcast:<div id="condition"></div>
         </div>
         </div>
         <div class="Male" align="left" >
