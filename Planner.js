@@ -65,36 +65,36 @@ $( document ).ready( function(){
                         shoes = "heavy";
                         top = "heavy";
                         bottom = "medium";
-                        $('#malebox').append("<img src='clothes/mens cold shoes.jpg' width='150' height='150'/>");
-                        $('#malebox').append("<img src='clothes/mens cold shirt.jpg' width='150' height='150'/>");
-                        $('#malebox').append("<img src='clothes/mens warm pants.jpg' width='150' height='150'/>");
-                        $('#femalebox').append("<img src='clothes/womens cold shoes.jpg' width='150' height='150'/>");
-                        $('#femalebox').append("<img src='clothes/womens cold shirt.jpg' width='150' height='150'/>");
-                        $('#femalebox').append("<img src='clothes/womens warm pants.jpg' width='150' height='150'/>");
+                        $('#maleshoes').append("<img src='clothes/mens cold shoes.jpg' width='150' height='150'/>");
+                        $('#maletop').append("<img src='clothes/mens cold shirt.jpg' width='150' height='150'/>");
+                        $('#malebottom').append("<img src='clothes/mens warm pants.jpg' width='150' height='150'/>");
+                        $('#femaleshoes').append("<img src='clothes/womens cold shoes.jpg' width='150' height='150'/>");
+                        $('#femaletop').append("<img src='clothes/womens cold shirt.jpg' width='150' height='150'/>");
+                        $('#femalebottom').append("<img src='clothes/womens warm pants.jpg' width='150' height='150'/>");
                     }
                     else if (jQuery.inArray(weather, codesMedium) != -1 ){
                         if (currentTemp > 50){
                             shoes = "medium";
                             top = "heavy";
                             bottom = "light";
-                            $('#malebox').append("<img src='clothes/mens cold shoes.jpg' width='150' height='150'/>");
-                            $('#malebox').append("<img src='clothes/mens warm shirt.jpg' width='150' height='150'/>");
-                            $('#malebox').append("<img src='clothes/mens warm pants.jpg' width='150' height='150'/>");
-                            $('#femalebox').append("<img src='clothes/womens cold shoes.jpg' width='150' height='150'/>");
-                            $('#femalebox').append("<img src='clothes/womens warm shirt.jpg' width='150' height='150'/>");
-                            $('#femalebox').append("<img src='clothes/womens warm pants.jpg' width='150' height='150'/>");
+                            $('#maleshoes').append("<img src='clothes/mens cold shoes.jpg' width='150' height='150'/>");
+                            $('#maletop').append("<img src='clothes/mens warm shirt.jpg' width='150' height='150'/>");
+                            $('#malebottom').append("<img src='clothes/mens warm pants.jpg' width='150' height='150'/>");
+                            $('#femaleshoes').append("<img src='clothes/womens cold shoes.jpg' width='150' height='150'/>");
+                            $('#femaletop').append("<img src='clothes/womens warm shirt.jpg' width='150' height='150'/>");
+                            $('#femalebottom').append("<img src='clothes/womens warm pants.jpg' width='150' height='150'/>");
                         }
                         else {
                             shoes = "medium";
                             top = "heavy";
                             bottom = "medium";
                             extra = "none";
-                            $('#malebox').append("<img src='clothes/mens cold shoes.jpg' width='150' height='150'/>");
-                            $('#malebox').append("<img src='clothes/mens cold shirt.jpg' width='150' height='150'/>");
-                            $('#malebox').append("<img src='clothes/mens cold pants.jpg' width='150' height='150'/>");
-                            $('#femalebox').append("<img src='clothes/womens cold shoes.jpg' width='150' height='150'/>");
-                            $('#femalebox').append("<img src='clothes/womens cold shirt.jpg' width='150' height='150'/>");
-                            $('#femalebox').append("<img src='clothes/womens cold pants.jpg' width='150' height='150'/>");
+                            $('#maleshoes').append("<img src='clothes/mens cold shoes.jpg' width='150' height='150'/>");
+                            $('#maletop').append("<img src='clothes/mens cold shirt.jpg' width='150' height='150'/>");
+                            $('#malebottom').append("<img src='clothes/mens cold pants.jpg' width='150' height='150'/>");
+                            $('#femaleshoes').append("<img src='clothes/womens cold shoes.jpg' width='150' height='150'/>");
+                            $('#femaletop').append("<img src='clothes/womens cold shirt.jpg' width='150' height='150'/>");
+                            $('#femalebottom').append("<img src='clothes/womens cold pants.jpg' width='150' height='150'/>");
                         }
                     }
                     else if (jQuery.inArray(weather, codesLight) != -1 ){
@@ -102,23 +102,23 @@ $( document ).ready( function(){
                             shoes = "light";
                             top ="light";
                             bottom = "light";
-                            $('#malebox').append("<img src='clothes/mens hot shoes.jpg' width='150' height='150'/>");
-                            $('#malebox').append("<img src='clothes/mens hot shirt.jpg' width='150' height='150'/>");
-                            $('#malebox').append("<img src='clothes/mens hot pants.jpg' width='150' height='150'/>");
-                            $('#femalebox').append("<img src='clothes/womens hot shoes.jpg' width='150' height='150'/>");
-                            $('#femalebox').append("<img src='clothes/womens hot shirt.jpg' width='150' height='150'/>");
-                            $('#femalebox').append("<img src='clothes/womens hot pants.jpg' width='150' height='150'/>");
+                            $('#maleshoes').append("<img src='clothes/mens hot shoes.jpg' width='150' height='150'/>");
+                            $('#maletop').append("<img src='clothes/mens hot shirt.jpg' width='150' height='150'/>");
+                            $('#malebottom').append("<img src='clothes/mens hot pants.jpg' width='150' height='150'/>");
+                            $('#femaleshoes').append("<img src='clothes/womens hot shoes.jpg' width='150' height='150'/>");
+                            $('#femaletop').append("<img src='clothes/womens hot shirt.jpg' width='150' height='150'/>");
+                            $('#femalebottom').append("<img src='clothes/womens hot pants.jpg' width='150' height='150'/>");
                         }
                         else {
                             shoes = "medium";
                             top ="medium";
                             bottom="medium";
-                            $('#malebox').append("<img src='clothes/mens medium shoes.jpg' width='150' height='150'/>");
-                            $('#malebox').append("<img src='clothes/mens medium shirt.jpg' width='150' height='150'/>");
-                            $('#malebox').append("<img src='clothes/mens medium pants.jpg' width='150' height='150'/>");
-                            $('#femalebox').append("<img src='clothes/womens medium shoes.jpg' width='150' height='150'/>");
-                            $('#femalebox').append("<img src='clothes/womens medium shirt.jpg' width='150' height='150'/>");
-                            $('#femalebox').append("<img src='clothes/womens medium pants.jpg' width='150' height='150'/>");
+                            $('#maleshoes').append("<img src='clothes/mens medium shoes.jpg' width='150' height='150'/>");
+                            $('#maletop').append("<img src='clothes/mens medium shirt.jpg' width='150' height='150'/>");
+                            $('#malebottom').append("<img src='clothes/mens medium pants.jpg' width='150' height='150'/>");
+                            $('#femaleshoes').append("<img src='clothes/womens medium shoes.jpg' width='150' height='150'/>");
+                            $('#femaletop').append("<img src='clothes/womens medium shirt.jpg' width='150' height='150'/>");
+                            $('#femalebottom').append("<img src='clothes/womens medium pants.jpg' width='150' height='150'/>");
                          }
                     }
                 }
