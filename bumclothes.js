@@ -137,15 +137,15 @@ $( document ).ready( function(){
                             if (currentCondition="Partly Cloudy" || "Cloudy" || "Overcast"){
                                 cloudyweather();
                             }
-                            if (currentCondition= "Sunny" || "Clear"){
+                            if (currentCondition= "Sunny" || "Clear" || "Mostly sunny"){
                                 sunnyweather();
                             }
-                            $('#maleshoes').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/mens hot shoes.jpg' width='150' height='150'/></a>");
-                            $('#maletop').append("<a href='http://popstyle.info/wp-content/uploads/2012/12/mens-t-shirt.jpg' target='_blank'><img src='clothes/mens hot shirt.jpg' width='150' height='150'/></a>");
-                            $('#malebottom').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/mens hot pants.jpg' width='150' height='150'/></a>");
-                            $('#femaleshoes').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/womens hot shoes.jpg' width='150' height='150'/></a>");
-                            $('#femaletop').append("<a href='https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQEP9cSpCCOdhKr_HLp0YlOwgUoSnL89tEpx0Wf4gLhdfoK-vOlBQ' target='_blank'><img src='clothes/womens hot shirt.jpg' width='150' height='150'/></a>");
-                            $('#femalebottom').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/womens hot pants.jpg' width='150' height='150'/></a>");
+                            $('#maleshoes').append("<a href='http://store.nike.com/us/en_us/?l=shop,pdp,ctr-inline/cid-1/pid-364180/pgid-438397' target='_blank'><img src='clothes/mens hot bum shoes.jpg' width='150' height='150'/></a>");
+                            $('#maletop').append("<a href='http://store.nike.com/us/en_us/?l=shop,pdp,ctr-inline/cid-1/pid-647605/pgid-489504' target='_blank'><img src='clothes/mens hot bum shirt.jpg' width='150' height='150'/></a>");
+                            $('#malebottom').append("<a href='http://store.nike.com/us/en_us/?l=shop,pdp,ctr-inline/cid-1/pid-523791/pgid-652784' target='_blank'><img src='clothes/mens hot bum pants.jpg' width='150' height='150'/></a>");
+                            $('#femaleshoes').append("<a href='http://shop.nordstrom.com/s/rainbow-narrow-strap-sandal-women/2941416' target='_blank'><img src='clothes/womens hot bum shoes.jpg' width='150' height='150'/></a>");
+                            $('#femaletop').append("<a href='http://www.thedealrack.com/p-2700-bella-ladies-37-oz-maxine-flowy-tank-top-b8800.aspx?cagpspn=pla&gclid=CJKr4ae95rYCFYef4AodtXQADQ' target='_blank'><img src='clothes/womens hot bum shirt.jpg' width='150' height='150'/></a>");
+                            $('#femalebottom').append("<a href='http://www.dickssportinggoods.com/product/index.jsp?productId=12553523&gsidynamic=GooglePLA-_-WOMENSATHLETICAPPAREL-_-WOMENSATHLETICAPPAREL-_-SKU-12115833&camp=CSE:GooglePLA:12553523:12115833:WOMENSATHLETICAPPAREL-' target='_blank'><img src='clothes/womens hot bum pants.jpg' width='150' height='150'/></a>");
                         }
                         else {
                             shoes = "medium";
@@ -157,12 +157,12 @@ $( document ).ready( function(){
                             if (currentCondition= "Sunny" || "Clear"){
                                 sunnyweather();
                             }
-                            $('#maleshoes').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/mens warm shoes.jpg' width='150' height='150'/></a>");
-                            $('#maletop').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/mens warm shirt.jpg' width='150' height='150'/></a>");
-                            $('#malebottom').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/mens warm pants.jpg' width='150' height='150'/></a>");
+                            $('#maleshoes').append("<a href='http://store.nike.com/us/en_us/?l=shop,pdp,ctr-inline/cid-1/pid-364180/pgid-438397' target='_blank'><img src='clothes/mens warm shoes.jpg' width='150' height='150'/></a>");
+                            $('#maletop').append("<a href='http://store.nike.com/us/en_us/?l=shop,pdp,ctr-inline/cid-1/pid-647605/pgid-489504' target='_blank'><img src='clothes/mens warm shirt.jpg' width='150' height='150'/></a>");
+                            $('#malebottom').append("<a href='http://store.nike.com/us/en_us/?l=shop,pdp,ctr-inline/cid-1/pid-523791/pgid-652784' target='_blank'><img src='clothes/mens warm pants.jpg' width='150' height='150'/></a>");
                             $('#femaleshoes').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/womens warm shoes.jpg' width='150' height='150'/></a>");
                             $('#femaletop').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/womens warm shirt.jpg' width='150' height='150'/></a>");
-                            $('#femalebottom').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/womens warm pants.jpg' width='150' height='150'/></a>");
+                            $('#femalebottom').append("<a href='http://www.dickssportinggoods.com/product/index.jsp?productId=12553523&gsidynamic=GooglePLA-_-WOMENSATHLETICAPPAREL-_-WOMENSATHLETICAPPAREL-_-SKU-12115833&camp=CSE:GooglePLA:12553523:12115833:WOMENSATHLETICAPPAREL-' target='_blank'><img src='clothes/womens hot bum pants.jpg' width='150' height='150'/></a>");
                         }
                     }
                 }

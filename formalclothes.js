@@ -140,12 +140,11 @@ $( document ).ready( function(){
                             if (currentCondition= "Sunny" || "Clear"){
                                 sunnyweather();
                             }
-                            $('#maleshoes').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/mens hot shoes.jpg' width='150' height='150'/></a>");
-                            $('#maletop').append("<a href='http://popstyle.info/wp-content/uploads/2012/12/mens-t-shirt.jpg' target='_blank'><img src='clothes/mens hot shirt.jpg' width='150' height='150'/></a>");
-                            $('#malebottom').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/mens hot pants.jpg' width='150' height='150'/></a>");
-                            $('#femaleshoes').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/womens hot shoes.jpg' width='150' height='150'/></a>");
-                            $('#femaletop').append("<a href='https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQEP9cSpCCOdhKr_HLp0YlOwgUoSnL89tEpx0Wf4gLhdfoK-vOlBQ' target='_blank'><img src='clothes/womens hot shirt.jpg' width='150' height='150'/></a>");
-                            $('#femalebottom').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/womens hot pants.jpg' width='150' height='150'/></a>");
+                            $('#maleshoes').append("<a href='http://www.zappos.com/frye-james-penny-loafer-tan-smooth-full-grain?ef_id=UQQk1QAATasVRlo1:20130425193040:s' target='_blank'><img src='clothes/mens formal hot shoes.jpg' width='150' height='150'/></a>");
+                            $('#maletop').append("<a href='http://www.rakuten.com/prod/ralph-lauren-men-s-single-breasted-2-button-navy-blue-wool-blazer/227217940.html?listingId=195095781' target='_blank'><img src='clothes/mens formal hot shirt.jpg' width='150' height='150'/></a>");
+                            $('#malebottom').append("<a href='http://www.sears.com/haggar-men-s-classic-pleated-khaki-pants/p-041M5153000P?prdNo=34&blockNo=34&blockType=G34' target='_blank'><img src='clothes/mens formal hot pants.jpg' width='150' height='150'/></a>");
+                            $('#femaleshoes').append("<a href='http://www.shoebuy.com/life-stride-parigi/599159/1232685' target='_blank'><img src='clothes/womens formal hot shoes.jpg' width='150' height='150'/></a>");
+                            $('#femaletop').append("<a href='http://www.rakuten.com/prod/a-l-c-womens-erin-sleeveless-v-neck-knit-maxi-dress/248388353.html?listingId=279545638' target='_blank'><img src='clothes/womens formal hot dress.jpg' width='150' height='300'/></a>");
                         }
                         else {
                             shoes = "medium";
