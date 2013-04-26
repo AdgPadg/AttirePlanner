@@ -5,6 +5,7 @@ $( document ).ready( function(){
         top = null, //will be set to either heavy waterproof, light waterproof,
                     //medium, or light.
         extra = null; //will be set to either scarf, hat, or umbrella.
+    
     $.ajax({
         url: "http://free.worldweatheronline.com/feed/weather.ashx?q=Harrisonburg%2C+Va%2CUSA&format=json&num_of_days=1&key=9f32aa67e5174729132002",
         dataType: 'jsonp',  // Use 'jsonp' because it is cross domain request 
@@ -23,7 +24,7 @@ $( document ).ready( function(){
                     wind = value.weather[0].windspeedMiles,
                     weather = parseInt(value.weather[0].weatherCode),
                     condition = value.weather[0].weatherDesc[0].value,
-                    currentCondition = value.current_condition[0].weatherDesc[0].value,
+                    currentCondition = "Cloudy", //value.current_condition[0].weatherDesc[0].value,
                     codesWaterproof = [179 , 182 , 185 , 200 , 227 , 230 , 281 ,
                        284 , 299 , 302 , 305 , 308 , 311 , 314 , 317 , 
                        320 , 326 , 329 , 332 , 335 , 338 , 350 , 356 ,
@@ -31,11 +32,16 @@ $( document ).ready( function(){
                        392 , 395],
                     codesHeavy = [386 , 353 , 323],
                     codesMedium = [296, 293, 266, 263],
-                    codesLight = [176, 143, 122, 119, 116, 113];
+                    codesLight = [176, 143, 122, 119, 116, 113],
+                    conSunny = ["Sunny", "Clear"],
+                    conRainy = ["Light rain shower", "Patchy light rain in area with thunder", "Light rain",  "Patchy light rain"],
+                    conCloudy = ["Partly Cloudy", "Cloudy", "Overcast"];
+                    
+                    
                     //Appends the icon url into the HTML file.
                     $('#current-icon').append("<img src='" + iconURL +  "'/>");
                     $('#today-icon').append("<img src='" + todayIcon +  "'/>");  
-                //Groups the Weather Description into categories
+                //Changes the background based on outside environment
                 function sunnyweather(){
                     document.body.background = "clothes/background.jpg";
                 }                
@@ -45,6 +51,8 @@ $( document ).ready( function(){
                 function cloudyweather(){
                     document.body.background = "clothes/cloudybackground.jpg";
                 }
+                
+                //Decides which clothes to wear
                 function categorize(){
                     //decides what to wear when waterproof clothes are required...  heavy=cold
                     if (jQuery.inArray(weather, codesWaterproof) != -1) {
@@ -77,11 +85,11 @@ $( document ).ready( function(){
                         shoes = "heavy";
                         top = "heavy";
                         bottom = "medium";
-                        if (currentCondition="Partly Cloudy" || "Cloudy" || "Overcast"){
-                                cloudyweather();
+                            if (jQuery.inArray(currentCondition, conCloudy) != -1) {
+                            cloudyweather();
                             }
-                            if (currentCondition= "Sunny" || "Clear"){
-                                sunnyweather();
+                            else if (jQuery.inArray(currentCondition, conSunny) != -1){
+                            sunnyweather();
                             }
                         $('#maleshoes').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/mens cold shoes.jpg' width='150' height='150'/></a>");
                         $('#maletop').append("<a href='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtSiBnId38zrcl10bqMEWM5NaZtvi4gnME34uXZZFUP3PtwVhx' target='_blank'><img src='clothes/mens cold shirt.jpg' width='150' height='150'/></a>");
@@ -95,13 +103,13 @@ $( document ).ready( function(){
                             shoes = "medium";
                             top = "heavy";
                             bottom = "light";
-                            if (currentCondition="Partly Cloudy" || "Cloudy" || "Overcast"){
+                                if (jQuery.inArray(currentCondition, conCloudy) != -1){
                                 cloudyweather();
-                            }
-                            if (currentCondition= "Sunny" || "Clear"){
+                                }
+                                else if (jQuery.inArray(currentCondition, conCloudy) != -1){
                                 sunnyweather();
-                            }
-                            if (currentCondition="Light rain shower" || "Patchy light rain in area with thunder" || "Light rain" || "Patchy light rain"){
+                                }
+                                else if (jQuery.inArray(currentCondition, conRainy) != -1){
                                 rainyweather();
                             }
                             $('#maleshoes').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/mens cold shoes.jpg' width='150' height='150'/></a>");
@@ -115,12 +123,12 @@ $( document ).ready( function(){
                             shoes = "medium";
                             top = "heavy";
                             bottom = "medium";
-                            if (currentCondition="Partly Cloudy" || "Cloudy" || "Overcast"){
+                                if (jQuery.inArray(currentCondition, conCloudy) != -1){
                                 cloudyweather();
-                            }
-                            if (currentCondition= "Sunny" || "Clear"){
+                                }
+                                else if (jQuery.inArray(currentCondition, conSunny) != -1){
                                 sunnyweather();
-                            }
+                                }
                             $('#maleshoes').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/mens cold shoes.jpg' width='150' height='150'/></a>");
                             $('#maletop').append("<a href='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtSiBnId38zrcl10bqMEWM5NaZtvi4gnME34uXZZFUP3PtwVhx' target='_blank'><img src='clothes/mens cold shirt.jpg' width='150' height='150'/></a>");
                             $('#malebottom').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/mens cold pants.jpg' width='150' height='150'/></a>");
@@ -134,12 +142,12 @@ $( document ).ready( function(){
                             shoes = "light";
                             top ="light";
                             bottom = "light";
-                            if (currentCondition="Partly Cloudy" || "Cloudy" || "Overcast"){
+                                if (jQuery.inArray(currentCondition, conCloudy) != -1){
                                 cloudyweather();
-                            }
-                            if (currentCondition= "Sunny" || "Clear"){
+                                }
+                                else if (jQuery.inArray(currentCondition, conSunny) != -1){
                                 sunnyweather();
-                            }
+                                }
                             $('#maleshoes').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/mens hot shoes.jpg' width='150' height='150'/></a>");
                             $('#maletop').append("<a href='http://popstyle.info/wp-content/uploads/2012/12/mens-t-shirt.jpg' target='_blank'><img src='clothes/mens hot shirt.jpg' width='150' height='150'/></a>");
                             $('#malebottom').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/mens hot pants.jpg' width='150' height='150'/></a>");
@@ -151,12 +159,12 @@ $( document ).ready( function(){
                             shoes = "medium";
                             top ="medium";
                             bottom="medium";
-                            if (currentCondition="Partly Cloudy" || "Cloudy" || "Overcast"){
+                                if (jQuery.inArray(currentCondition, conCloudy) != -1){
                                 cloudyweather();
-                            }
-                            if (currentCondition= "Sunny" || "Clear"){
+                                }
+                                else if (jQuery.inArray(currentCondition, conSunny) != -1){
                                 sunnyweather();
-                            }
+                                }
                             $('#maleshoes').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/mens warm shoes.jpg' width='150' height='150'/></a>");
                             $('#maletop').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/mens warm shirt.jpg' width='150' height='150'/></a>");
                             $('#malebottom').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/mens warm pants.jpg' width='150' height='150'/></a>");
