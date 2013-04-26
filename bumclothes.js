@@ -5,6 +5,7 @@ $( document ).ready( function(){
         top = null, //will be set to either heavy waterproof, light waterproof,
                     //medium, or light.
         extra = null; //will be set to either scarf, hat, or umbrella.
+    
     $.ajax({
         url: "http://free.worldweatheronline.com/feed/weather.ashx?q=Harrisonburg%2C+Va%2CUSA&format=json&num_of_days=1&key=9f32aa67e5174729132002",
         dataType: 'jsonp',  // Use 'jsonp' because it is cross domain request 
@@ -31,10 +32,15 @@ $( document ).ready( function(){
                        392 , 395],
                     codesHeavy = [386 , 353 , 323],
                     codesMedium = [296, 293, 266, 263],
-                    codesLight = [176, 143, 122, 119, 116, 113];
+                    codesLight = [176, 143, 122, 119, 116, 113],
+                    conSunny = ["Sunny", "Clear"],
+                    conRainy = ["Light rain shower", "Patchy light rain in area with thunder", "Light rain",  "Patchy light rain"],
+                    conCloudy = ["Partly Cloudy", "Cloudy", "Overcast"];
+                    
                     //Appends the icon url into the HTML file.
                     $('#current-icon').append("<img src='" + iconURL +  "'/>");
                     $('#today-icon').append("<img src='" + todayIcon +  "'/>");  
+                
                 //Groups the Weather Description into categories
                 function sunnyweather(){
                     document.body.background = "clothes/background.jpg";
@@ -77,11 +83,11 @@ $( document ).ready( function(){
                         shoes = "heavy";
                         top = "heavy";
                         bottom = "medium";
-                        if (currentCondition="Partly Cloudy" || "Cloudy" || "Overcast"){
-                                cloudyweather();
+                            if (jQuery.inArray(currentCondition, conCloudy) != -1) {
+                            cloudyweather();
                             }
-                            if (currentCondition= "Sunny" || "Clear"){
-                                sunnyweather();
+                            else if (jQuery.inArray(currentCondition, conSunny) != -1){
+                            sunnyweather();
                             }
                         $('#maleshoes').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/mens cold shoes.jpg' width='150' height='150'/></a>");
                         $('#maletop').append("<a href='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtSiBnId38zrcl10bqMEWM5NaZtvi4gnME34uXZZFUP3PtwVhx' target='_blank'><img src='clothes/mens cold shirt.jpg' width='150' height='150'/></a>");
@@ -95,13 +101,13 @@ $( document ).ready( function(){
                             shoes = "medium";
                             top = "heavy";
                             bottom = "light";
-                            if (currentCondition="Partly Cloudy" || "Cloudy" || "Overcast"){
+                                if (jQuery.inArray(currentCondition, conCloudy) != -1){
                                 cloudyweather();
-                            }
-                            if (currentCondition= "Sunny" || "Clear"){
+                                }
+                                else if (jQuery.inArray(currentCondition, conCloudy) != -1){
                                 sunnyweather();
-                            }
-                            if (currentCondition="Light rain shower" || "Patchy light rain in area with thunder" || "Light rain" || "Patchy light rain"){
+                                }
+                                else if (jQuery.inArray(currentCondition, conRainy) != -1){
                                 rainyweather();
                             }
                             $('#maleshoes').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/mens cold shoes.jpg' width='150' height='150'/></a>");
@@ -115,11 +121,11 @@ $( document ).ready( function(){
                             shoes = "medium";
                             top = "heavy";
                             bottom = "medium";
-                            if (currentCondition="Partly Cloudy" || "Cloudy" || "Overcast"){
-                                cloudyweather();
+                            if (jQuery.inArray(currentCondition, conCloudy) != -1){
+                            cloudyweather();
                             }
-                            if (currentCondition= "Sunny" || "Clear"){
-                                sunnyweather();
+                            else if (jQuery.inArray(currentCondition, conSunny) != -1){
+                            sunnyweather();
                             }
                             $('#maleshoes').append("<a href='http://www.espn.com' target='_blank'><img src='clothes/mens cold shoes.jpg' width='150' height='150'/></a>");
                             $('#maletop').append("<a href='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtSiBnId38zrcl10bqMEWM5NaZtvi4gnME34uXZZFUP3PtwVhx' target='_blank'><img src='clothes/mens cold shirt.jpg' width='150' height='150'/></a>");
@@ -134,12 +140,12 @@ $( document ).ready( function(){
                             shoes = "light";
                             top ="light";
                             bottom = "light";
-                            if (currentCondition="Partly Cloudy" || "Cloudy" || "Overcast"){
+                                if (jQuery.inArray(currentCondition, conCloudy) != -1){
                                 cloudyweather();
-                            }
-                            if (currentCondition= "Sunny" || "Clear" || "Mostly sunny"){
+                                }
+                                else if (jQuery.inArray(currentCondition, conSunny) != -1){
                                 sunnyweather();
-                            }
+                                }
                             $('#maleshoes').append("<a href='http://store.nike.com/us/en_us/?l=shop,pdp,ctr-inline/cid-1/pid-364180/pgid-438397' target='_blank'><img src='clothes/mens hot bum shoes.jpg' width='150' height='150'/></a>");
                             $('#maletop').append("<a href='http://store.nike.com/us/en_us/?l=shop,pdp,ctr-inline/cid-1/pid-647605/pgid-489504' target='_blank'><img src='clothes/mens hot bum shirt.jpg' width='150' height='150'/></a>");
                             $('#malebottom').append("<a href='http://store.nike.com/us/en_us/?l=shop,pdp,ctr-inline/cid-1/pid-523791/pgid-652784' target='_blank'><img src='clothes/mens hot bum pants.jpg' width='150' height='150'/></a>");
@@ -151,12 +157,12 @@ $( document ).ready( function(){
                             shoes = "medium";
                             top ="medium";
                             bottom="medium";
-                            if (currentCondition="Partly Cloudy" || "Cloudy" || "Overcast"){
+                                if (jQuery.inArray(currentCondition, conCloudy) != -1){
                                 cloudyweather();
-                            }
-                            if (currentCondition= "Sunny" || "Clear"){
+                                }
+                                else if (jQuery.inArray(currentCondition, conSunny) != -1){
                                 sunnyweather();
-                            }
+                                }
                             $('#maleshoes').append("<a href='http://store.nike.com/us/en_us/?l=shop,pdp,ctr-inline/cid-1/pid-364180/pgid-438397' target='_blank'><img src='clothes/mens warm shoes.jpg' width='150' height='150'/></a>");
                             $('#maletop').append("<a href='http://store.nike.com/us/en_us/?l=shop,pdp,ctr-inline/cid-1/pid-647605/pgid-489504' target='_blank'><img src='clothes/mens warm shirt.jpg' width='150' height='150'/></a>");
                             $('#malebottom').append("<a href='http://store.nike.com/us/en_us/?l=shop,pdp,ctr-inline/cid-1/pid-523791/pgid-652784' target='_blank'><img src='clothes/mens warm pants.jpg' width='150' height='150'/></a>");
