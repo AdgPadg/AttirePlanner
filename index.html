@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>Attire Planner</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link type="text/css" rel="stylesheet" href="weatherstyle.css"/>
+        <script type="text/javascript">
+            function change(url){
+                if(url=="none"){
+                    return false;
+                }
+                else {
+                    window.location=url;
+                }
+            }
+</script>
+    </head>
+    <body>
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="Planner.js"></script>
+        
+        <div id="heading">What should I wear today?</div>
+        <div id="heading">
+            Location: Harrisonburg
+        </div>
+        <div id="box">
+        <form>
+            <select onchange="change(this.value)" name = "website">
+                <option value = "attireplanner.html">Casual</option>
+                <option value = "formalattire.html" >Formal</option>
+                <option value = "bumattire.html">Bum</option>
+            </select>
+        </form>
+        </div>
+        <div id="aParent">
+            <center>
+            <div id="Male" >
+                    <center>Guys</center>
+                    <div id="maletop"></div><br>
+                    <div id="malebottom"></div><br>
+                    <div id="maleshoes"></div>
+            </div>
+            </center>
+            <div id="weather">  
+                <div id="headings">
+                    <div id="current-icon">
+                    Current Condition: <div id="currentCondition"></div>
+                    </div>
+                </div><br><br><br>
+                <div id="headings">
+                    Current Temperature:<div id="currentTemp"></div>
+                </div><br>
+                <div id="headings">
+                    High: <div id="maxTemp"></div>
+                </div><br>
+                <div id="headings">
+                    Low:<div id="minTemp"></div>
+                </div><br>
+                <div id="headings">
+                    Precipitation(in mm):<div id="totalPrecip"></div>
+                </div><br>
+                <div id="headings">
+                    <div id="today-icon">
+                    Today's Forecast:<div id="condition"></div>
+                    </div><br>
+                </div>   
+            </div>
+            <div id="Female">
+                <center>Girls</center>
+                <div id="femaletop"></div><br>
+                <div id="femalebottom"></div><br>
+                <div id="femaleshoes"></div>
+            </div>
+        </div>
+    </body>
+</html>
