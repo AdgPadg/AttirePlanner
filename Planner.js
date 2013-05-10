@@ -24,7 +24,7 @@ $( document ).ready( function(){
                     wind = value.weather[0].windspeedMiles,
                     weather = parseInt(value.weather[0].weatherCode),
                     condition = value.weather[0].weatherDesc[0].value,
-                    currentCondition = "Cloudy", //value.current_condition[0].weatherDesc[0].value,
+                    currentCondition = value.current_condition[0].weatherDesc[0].value,
                     codesWaterproof = [179 , 182 , 185 , 200 , 227 , 230 , 281 ,
                        284 , 299 , 302 , 305 , 308 , 311 , 314 , 317 , 
                        320 , 326 , 329 , 332 , 335 , 338 , 350 , 356 ,
